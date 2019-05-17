@@ -93,16 +93,13 @@ class AddCustomerForm extends React.Component {
                             <form className="">
                                 <InputFieldDate name="customer_date" id="customer-date" handler={this.handleChange} label="Date:" value={this.state.customer_date}/>
                                 <InputField name="customer_customer" id="customer-name" handler={this.handleChange} label="Customer:" value={this.state.customer_customer}/>
-
                                 <SelectAreaField options={Channel} name="customer_channel" handler={this.handleChange} 
                                  label="Channel:" value={this.state.customer_channel}/>
-
                                 <TextAreaField name="customer_description" handler={this.handleChange} label="Description:" value={this.state.customer_description}/>
                                 <InputField name="customer_website" id="customer-website" handler={this.handleChange} label="Website:" value={this.state.customer_website}/>
                             </form>
                         </div>
                         <div className="modal-footer">
-                        <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
                         <button type="submit" onClick={() => this.addCustomer()} className="btn btn-info" data-dismiss="modal">Add</button>
                         </div>
                     </div>

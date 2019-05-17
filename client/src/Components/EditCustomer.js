@@ -123,7 +123,6 @@ class EditCustomerForm extends React.Component {
                             </form>
                         </div>
                         <div className="modal-footer">
-                        <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
                         <button type="submit" onClick={() => this.editCustomer()} className="btn btn-info" data-dismiss="modal">Complete</button>
                         </div>
                     </div>
