@@ -10,7 +10,7 @@ import {
   
   } from "./types";
 
-const apiURL = `${process.env.PORT}/api/users`;
+const apiURL = `${process.env.URL}/api/users`;
 
 
 // Login - get user token
