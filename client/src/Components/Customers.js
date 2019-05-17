@@ -1,10 +1,6 @@
 import React,  { Component } from 'react';
 import { Link } from 'react-router-dom';
-import axios from'axios';
-
 import {CSVLink} from 'react-csv';
-import jsPDF from 'jspdf';
-import 'jspdf-autotable';
 
 
 
