@@ -65,7 +65,7 @@ class EditCustomerForm extends React.Component {
 
     //Need to Add ComponentDidMount method and do DB connect there
     componentDidMount(){
-        axios.get(`${process.env.PORT}/customers/` + this.props.match.params.id)
+        axios.get(`/customers/` + this.props.match.params.id)
         .then(res => {
             this.setState({
             _id: res.data._id,
@@ -116,9 +116,9 @@ class EditCustomerForm extends React.Component {
                             <form className="">
                                 <InputFieldDate name="customer_date" id="customer-date" handler={this.handleChange} label="Action Date:" value={this.state.customer_date}/>
                                 <InputField name="customer_customer" id="customer-name" handler={this.handleChange} label="Customer:" value={this.state.customer_customer}/>
-
                                 <SelectAreaField options={Channel} name="customer_channel" handler={this.handleChange} 
                                  label="Channel:" value={this.state.customer_channel}/>
+                                 <TextAreaField name="customer_description" handler={this.handleChange} label="Description:" value={this.state.customer_description}/>
                                 <InputField name="customer_website" id="customer-website" handler={this.handleChange} label="Website:" value={this.state.customer_website}/>
                             </form>
                         </div>

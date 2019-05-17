@@ -1,7 +1,4 @@
 import React from 'react';
-
-
-var Priority = ["-Select-", "Customer", "P1", "P2"]
 var Channel = ["-Select-", "Retail Chain", "Hotel Chain", "Bakery"]
 
 function InputField(props) {
@@ -52,7 +49,6 @@ class AddCustomerForm extends React.Component {
     constructor(props) {
         super(props);
             this.state={
-            
             customer_date:"",
             customer_customer:"",
             customer_channel:"",
@@ -96,8 +92,6 @@ class AddCustomerForm extends React.Component {
                             <h2>Add A Customer</h2>
                             <form className="">
                                 <InputFieldDate name="customer_date" id="customer-date" handler={this.handleChange} label="Date:" value={this.state.customer_date}/>
-                                <SelectAreaField options={Priority} name="customer_priority" handler={this.handleChange} 
-                                 label="Priority" value={this.state.customer_priority}/>
                                 <InputField name="customer_customer" id="customer-name" handler={this.handleChange} label="Customer:" value={this.state.customer_customer}/>
 
                                 <SelectAreaField options={Channel} name="customer_channel" handler={this.handleChange} 
