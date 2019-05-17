@@ -163,8 +163,8 @@ User.findOne({email}).then(user => {
           var smtpTransport = nodemailer.createTransport({
             service: 'Gmail',
             auth: {
-              user: process.env.GMAIL,
-              pass: process.env.GMAILPW
+              user: `${process.env.GMAIL}`,
+              pass: `${process.env.GMAILPW}`
             }
           });
           var mailOptions = {
