@@ -7,16 +7,13 @@ const async = require('async');
 const nodemailer = require('nodemailer');
 const crypto = require("crypto");
 
-// Load input validation
+
 const validateRegisterInput = require("../../validation/register");
 const validateLoginInput = require("../../validation/login");
 
-// Load User Model
 const User = require("../../models/user.model");
 
-// @route POST api/users/register
-// @desc Register user
-// @access Public
+
 router.get("/", function(req,res) {
     User.find((err,users)  => {
         if(err) {
@@ -77,9 +74,7 @@ router.get("/", function(req,res) {
       });
     });
 
-// @route POST api/users/login
-// @desc Login user and return JWT token
-// @access Public
+
 router.post("/login", (req, res) => {
 
     // Form validation
@@ -134,10 +129,7 @@ User.findOne({email}).then(user => {
         });
       });
 
-      // Forgot Password Routes +
-      // Make route with crypto and async +
-      // Make front-end component
-      // Connect
+      
       router.post("/forgot", (req, res,next) => {
       async.waterfall([
         function(done){
@@ -161,7 +153,7 @@ User.findOne({email}).then(user => {
         },
         function(token,user,done) {
           var smtpTransport = nodemailer.createTransport({
-            service: 'Gmail',
+            host: 'Gmail',
             auth: {
               user: `${process.env.GMAIL}`,
               pass: `${process.env.GMAILPW}`
