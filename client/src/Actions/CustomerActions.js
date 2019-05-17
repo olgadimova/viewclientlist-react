@@ -2,7 +2,7 @@ import { ADD_CUSTOMERS, SORT_CUSTOMERS, SEARCH_CUSTOMERS, DELETE_CUSTOMERS, EDIT
 import axios from 'axios';
 // Axios will make requests from here
 
-const apiURL = `${process.env.PORT}`;
+const apiURL = `/customers`;
 
 // Fetch Customers from Redux Store
 
@@ -15,7 +15,7 @@ export const fetchCustomers = (customers) => {
 
 export const fetchCustomersDb = () => {
     return function(dispatch) {
-        return axios.get(`${apiURL}/customers`)
+        return axios.get(`${apiURL}`)
            .then(response => {
                console.log(response.data)
             dispatch(fetchCustomers(response))
@@ -36,7 +36,7 @@ export const addCustomersDb = ({ id,
     customer_followup, customer_website
 }) => {
 return function(dispatch){
-    return axios.post(`${apiURL}/customers/add`, {customer_date, customer_customer, 
+    return axios.post(`${apiURL}/add`, {customer_date, customer_customer, 
         customer_channel, customer_description, customer_operation, customer_status, 
         customer_updates,customer_result, customer_total, customer_account,
         customer_priority, customer_followup, customer_website })
@@ -89,7 +89,7 @@ export const deleteCustomers = _id => {
 
 export const deleteCustomersDb = _id => {
     return (dispatch) => {
-        return axios.post(`${apiURL}/customers/delete/${_id}`)
+        return axios.post(`${apiURL}/delete/${_id}`)
         .then(response => {
             dispatch(deleteCustomers(response.data))
         })
@@ -122,7 +122,7 @@ export const editCustomersDb = ({
     customer_followup, customer_website
 }) => {
 return (dispatch) => {
-    return axios.post(`${apiURL}/customers/update/`+ _id, {
+    return axios.post(`${apiURL}/update/`+ _id, {
         customer_date, customer_customer, customer_channel, customer_description, 
         customer_operation, customer_status, customer_updates,
         customer_result, customer_total, customer_account, customer_priority, 
