@@ -184,8 +184,10 @@ User.findOne({email}).then(user => {
       function(err, user) {
         if (!user) {
           res.status(400).json({expiredtoken: "Password reset token is invalid or has expired."});
+        } else {
+          res.status(200).json(user);
         }
-        res.status(200).json(user);
+        
       });
     });
       

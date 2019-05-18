@@ -51,15 +51,15 @@ export default class ForgotPassReset extends Component {
    render() {
        return (
            <div className="container">
-           <div className="row">
+           <div className="row"  style={{height:"calc(100vh - 115px)"}}>
            <div className="col-12 col-md-6 mt-4 mb-4">
-           <h4 style={{textAlign: "center"}}>
+           <h5 style={{textAlign: "center"}}>
                      <b>Enter New Password Below:</b>
-            </h4>
+            </h5>
             <p className="col-12 alert ">{this.state.errors} {this.state.success}</p> 
 
            <form className="col-12" noValidate onSubmit={this.onSubmit}>
-           <div className="col-12 form-group mb-0">
+           <div className="col-12 form-group mb-0 pl-0">
            <input autoFocus
                         className="form-control col-12"
                         onChange={this.onChange}
