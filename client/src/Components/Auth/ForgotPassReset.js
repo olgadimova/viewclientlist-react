@@ -71,7 +71,7 @@ export default class ForgotPassReset extends Component {
                         
             <label htmlFor="email" className="col-8 col-form-label">New Password: </label>
            </div>
-           <div className="col-12 form-group mb-0">
+           <div className="col-12 form-group mb-0 pl-0">
            <input 
                         className="form-control col-12"
                         onChange={this.onChange}

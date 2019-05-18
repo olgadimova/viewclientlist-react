@@ -75,7 +75,10 @@ export const loginUser = userData => dispatch => {
       axios
       .post(`${apiURL}/reset/` + token, {password, confirm, token})
       .then(res => {
-        console.log(res)
+        dispatch({
+          type: SEND_RESET_EMAIL,
+          payload: res.data
+        })
       })
       .catch(err => {
         throw (err);
