@@ -15,7 +15,7 @@ export default class ForgotPassReset extends Component {
         this.onChange=this.onChange.bind(this);
     }
     componentDidMount(){
-        axios.get(`${process.env.PORT}/api/users/reset/` + this.props.match.params.token)
+        axios.get("/api/users/reset/" + this.props.match.params.token)
         .then(res => {
             const {resetPasswordToken} = res.data;
             this.setState({token: resetPasswordToken})
