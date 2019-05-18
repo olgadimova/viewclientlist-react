@@ -12,7 +12,7 @@ function mapStateToProps(state) {
   const {expiredtoken}  = state.errors;
   const {emailsent} = state.auth
    return { errors: expiredtoken,
-            emailsent: emailsent.emailSuccess}
+            emailsent: emailsent.successEmail}
 };
 
 const ForgotPassResetCont = connect(mapStateToProps, mapDispatchToProps)(ForgotPassReset);
