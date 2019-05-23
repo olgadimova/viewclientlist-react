@@ -49,6 +49,8 @@ class Login extends Component {
     }
 
     render() {
+        const { errors } = this.state; 
+
         return(
          <div className="container h-100" >
             <div className="row py-4" style={{height:"calc(100vh - 105px)", alignItems: "center", justifyContent: "center" }}>
@@ -68,7 +70,7 @@ class Login extends Component {
                     & this.state.errors.emailnotfound === undefined & this.state.errors.passwordincorrect === undefined
                     ? 
                     <br/> :
-                    <p className="col-12 alert alert-warning border-0">{this.state.errors.email} {this.state.errors.emailnotfound}</p>
+                    <p className="col-12 alert alert-warning border-0">{this.props.errors.email} {this.props.errors.emailnotfound}</p>
                     }
                    
                         <input 
@@ -85,10 +87,10 @@ class Login extends Component {
                         
                     </div>
                     <div className="col-12 form-group">
-                    { this.props.errors.email === undefined & this.props.errors.password === undefined 
-                    & this.props.errors.emailnotfound === undefined & this.props.errors.passwordincorrect === undefined ?
+                    { this.state.errors.email === undefined & this.state.errors.password === undefined 
+                    & this.state.errors.emailnotfound === undefined & this.state.errors.passwordincorrect === undefined ?
                     <br/> :
-                    <p className="col-12 alert ">{this.props.errors.password} {this.props.errors.passwordincorrect}</p>
+                    <p className="col-12 alert ">{this.state.errors.password} {this.state.errors.passwordincorrect}</p>
                     }
                     <input 
                         className="form-control col-12"
