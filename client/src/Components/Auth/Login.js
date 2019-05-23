@@ -64,11 +64,11 @@ class Login extends Component {
                 <div className="row">
                 <form className="col-12" noValidate onSubmit={this.onSubmit}>
                     <div className="col-12 form-group mb-0">
-                    { this.props.errors.email === undefined & this.props.errors.password === undefined 
-                    & this.props.errors.emailnotfound === undefined & this.props.errors.passwordincorrect === undefined
+                    { this.state.errors.email === undefined & this.state.errors.password === undefined 
+                    & this.state.errors.emailnotfound === undefined & this.state.errors.passwordincorrect === undefined
                     ? 
                     <br/> :
-                    <p className="col-12 alert alert-warning border-0">{this.props.errors.email} {this.props.errors.emailnotfound}</p>
+                    <p className="col-12 alert alert-warning border-0">{this.state.errors.email} {this.state.errors.emailnotfound}</p>
                     }
                    
                         <input 
