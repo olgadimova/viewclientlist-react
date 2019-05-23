@@ -11,6 +11,7 @@ class Login extends Component {
         this.state = {
             email: "",
             password: "",
+            errors: ""
         };
         this.onSumbit=this.onSubmit.bind(this);
         this.onChange=this.onChange.bind(this);
