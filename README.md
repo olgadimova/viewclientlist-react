@@ -1,2 +1,2 @@
-Client List Application made using MERN stack( MongoDB, Express, React.js and Node.js).
-Additionally I've used other libraries such: nodemailer, JSONwebtoken, react-router and express-router, passport.js, axios etc.
+Client List Application made using MERN stack( MongoDB, Express, React.js with Redux and Node.js).
+Additionally I've used other libraries such as: nodemailer, JSONwebtoken, react-router and express-router, passport.js, axios etc.
