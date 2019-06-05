@@ -35,7 +35,7 @@ router.get("/", function(req,res) {
       });
     });
 
-    router.post("/manreguser", (req,res) => {
+    /*router.post("/manreguser", (req,res) => {
       // Form validation
     
       const {errors, isValid} = validateRegisterInput(req.body);
@@ -74,7 +74,7 @@ router.get("/", function(req,res) {
       });
     });
 
-
+*/
 router.post("/login", (req, res) => {
 
     // Form validation
